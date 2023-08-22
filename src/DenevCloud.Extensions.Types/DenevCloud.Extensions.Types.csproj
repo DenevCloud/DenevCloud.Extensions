@@ -15,9 +15,10 @@
 	<PackageId>DenevCloud.Extensions.Types</PackageId>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<RepositoryType>git</RepositoryType>
+	<RepositoryUrl>https://github.com/DenevCloud/DenevCloud.Extensions</RepositoryUrl>
 	  
-	<AssemblyVersion>1.0.1</AssemblyVersion>
-	<FileVersion>1.0.1</FileVersion>
+	<AssemblyVersion>1.0.2</AssemblyVersion>
+	<FileVersion>1.0.2</FileVersion>
 	<Version>$(AssemblyVersion)</Version>
 
 	<SignAssembly>True</SignAssembly>
