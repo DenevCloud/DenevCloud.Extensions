@@ -3,22 +3,40 @@ using System.Threading.Tasks;
 
 namespace DenevCloud.Extensions.Types;
 
+/// <summary>
+/// Rust-like Option type for C#. Supports implicit conversion to bool, int, byte, uint, sbyte and Option.
+/// </summary>
+/// <typeparam name="TResult">The type of result that will be returned if the is 'Some' value.</typeparam>
 public readonly struct OptionResult<TResult>
 {
     private readonly Option _option { get; }
     private readonly TResult? _result { get; }
 
+
+    /// <summary>
+    /// Constructor for a 'Some' OptionResult.
+    /// </summary>
+    /// <param name="result">The value that will be returned.</param>
     public OptionResult(TResult result)
     {
         _result = result;
         _option = Option.Some;
     }
 
+    /// <summary>
+    /// Constructor for a 'None' OptionResult.
+    /// </summary>
     public OptionResult()
     {
         _option = Option.None;
     }
 
+    /// <summary>
+    /// Return the value of the OptionResult if it is 'Some', otherwise return the default value of the type or throw an exception.
+    /// </summary>
+    /// <param name="ThrowIfNone">Throw an 'InvalidOperationException' if the Option is 'None'.</param>
+    /// <returns>The value stored.</returns>
+    /// <exception cref="InvalidOperationException">Throwed if the bool 'ThrowIfNone' is set to true and there is no value stored.</exception>
     public TResult? Unwrap(bool ThrowIfNone = false)
     {
         if (_option == Option.None)
@@ -30,8 +48,17 @@ public readonly struct OptionResult<TResult>
             return _result;
     }
 
+    /// <summary>
+    /// Get the Option of the OptionResult ('Some' or 'None').
+    /// </summary>
     public Option Option => _option;
 
+    /// <summary>
+    /// Async function for returning the value of the OptionResult if it is 'Some', otherwise return the default value of the type or throw an exception.
+    /// </summary>
+    /// <param name="ThrowIfNone">Throw an 'InvalidOperationException' if the Option is 'None'.</param>
+    /// <returns>The value stored.</returns>
+    /// <exception cref="InvalidOperationException">Throwed if the bool 'ThrowIfNone' is set to true and there is no value stored.</exception>
     public Task<TResult?> UnwrapAsync(bool ThrowIfNone = false)
     {
         Task.Yield();
@@ -91,6 +118,10 @@ public readonly struct OptionResult<TResult>
     }
 }
 
+/// <summary>
+/// Used to create a 'None' OptionResult.
+/// </summary>
+/// <typeparam name="TResult">The type of result that will be returned if the is 'Some' value.</typeparam>
 public readonly struct None<TResult>
 {
     public static implicit operator OptionResult<TResult?>(None<TResult?> none)
@@ -99,6 +130,10 @@ public readonly struct None<TResult>
     }
 }
 
+/// <summary>
+/// Used to create a 'Some' OptionResult. The constructor takes the value that will be returned.
+/// </summary>
+/// <typeparam name="TResult">The type of result that will be returned if the is 'Some' value.</typeparam>
 public readonly struct Some<TResult>
 {
     private readonly TResult? _result { get; }
@@ -114,6 +149,9 @@ public readonly struct Some<TResult>
     }
 }
 
+/// <summary>
+/// OptionResult<TResult> enum for 'Some' and 'None' type of byte. None = 0, Some = 1.
+/// </summary>
 public enum Option : byte
 {
     None = 0,
