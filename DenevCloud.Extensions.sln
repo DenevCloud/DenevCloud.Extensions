@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DenevCloud.Extensions.Types", "DenevCloud.Extensions.Types\DenevCloud.Extensions.Types.csproj", "{A89178AD-3040-40B8-B9E4-73AB065D4C69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Debug|x64.ActiveCfg = Debug|x64
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Debug|x64.Build.0 = Debug|x64
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Debug|x86.ActiveCfg = Debug|x86
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Debug|x86.Build.0 = Debug|x86
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Release|x64.ActiveCfg = Release|x64
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Release|x64.Build.0 = Release|x64
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Release|x86.ActiveCfg = Release|x86
+		{A89178AD-3040-40B8-B9E4-73AB065D4C69}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {037DD7E1-D95F-43B6-A59C-0215B71A9EC0}
+	EndGlobalSection
+EndGlobal

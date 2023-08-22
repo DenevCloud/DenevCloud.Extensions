@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFrameworks>net7.0;net6.0;netstandard2.1;net8.0</TargetFrameworks>
+	<LangVersion>11</LangVersion>
+	  
+	<Platforms>AnyCPU;x64;x86</Platforms>
+
+	<Authors>Denev Cloud; Milen Denev</Authors>
+	<Company>Denev Cloud</Company>
+	<Product>Denev Cloud's Extended Types</Product>
+	<Title>Denev Cloud's Extended Types</Title>
+	<Description>A library containing helpful types to make working with types easier.</Description>
+	  
+	<PackageId>DenevCloud.Extensions.Types</PackageId>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<RepositoryType>git</RepositoryType>
+	  
+	<AssemblyVersion>1.0.1</AssemblyVersion>
+	<FileVersion>1.0.1</FileVersion>
+	<Version>$(AssemblyVersion)</Version>
+
+	<SignAssembly>True</SignAssembly>
+	 
+	<ErrorReport>Full</ErrorReport>
+	<DebugType>Full</DebugType>
+	<DebugSymbols>true</DebugSymbols>
+	<ReportAnalyzer>true</ReportAnalyzer>
+
+	<PublishReadyToRun>true</PublishReadyToRun>
+
+	<ImplicitUsings>disable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
