@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 	<TargetFrameworks>net7.0;net6.0;netstandard2.1;net8.0</TargetFrameworks>
@@ -16,9 +16,11 @@
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<RepositoryType>git</RepositoryType>
 	<RepositoryUrl>https://github.com/DenevCloud/DenevCloud.Extensions</RepositoryUrl>
-	  
-	<AssemblyVersion>1.0.2</AssemblyVersion>
-	<FileVersion>1.0.2</FileVersion>
+	<PackageTags>Extensions;Types;</PackageTags>
+	<PackageProjectUrl>https://github.com/DenevCloud/DenevCloud.Extensions</PackageProjectUrl>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<AssemblyVersion>1.0.1</AssemblyVersion>
+	<FileVersion>1.0.1</FileVersion>
 	<Version>$(AssemblyVersion)</Version>
 
 	<SignAssembly>True</SignAssembly>
@@ -33,5 +35,11 @@
 	<ImplicitUsings>disable</ImplicitUsings>
 	<Nullable>enable</Nullable>
   </PropertyGroup>
+	
+  <ItemGroup>	
+	<None Include="docs\README.md" Pack="true" PackagePath="\">
+	  <Generator>ResXFileCodeGenerator</Generator>
+	</None>
+  </ItemGroup>
 
 </Project>
